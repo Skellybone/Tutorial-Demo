@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html land = "en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>RogueLike</title>
+    <script src="js/phaser.min.js"></script>
+    <script src="js/baseScene.js"></script>
+    <script src='js/CustomSprite.js'></script>
+    <script src="js/SpawnRoom.js"></script>
+    <script src="js/Room1.js"></script>
+    <script src="js/Room2.js"></script>
+    <script src="js/Room3.js"></script>
+    <script src="js/Room4.js"></script>
+    <script src="js/Room5.js"></script>
+    <script src="js/EndRoom.js"></script>
+    <style src="stylesheet.css"></style>
+</head>
+<body>
+    <script>
+        var config = {
+            width: 480,
+            height: 480,
+            backgroundColor: '#000',
+            pixelArt: true,
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    debug: false
+                }
+            },
+            scene: [SpawnRoom, Room1, Room2, Room3, Room4, Room5, EndRoom]
+        }
+        let game = new Phaser.Game(config)
+    </script>
+</body>
+</html>
